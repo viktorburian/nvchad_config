@@ -30,6 +30,21 @@ M.crates = {
                 require("crates").upgrade_all_crates()
             end,
             "Update crates"
+        },
+        ["<leader>rcp"] = {
+            function ()
+                require("crates").show_crate_popup()
+            end,
+            "Show popup"
+        }
+    }
+}
+
+M.git = {
+    n = {
+        ["<leader>gg"] = {
+            "<cmd> LazyGit <CR>",
+            "Open LazyGit"
         }
     }
 }

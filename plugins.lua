@@ -70,6 +70,12 @@ local plugins = {
             crates.setup(opts)
             crates.show()
         end,
+        opts = {
+            null_ls = {
+                enabled = true,
+                name = "crates.nvim",
+            },
+        },
    },
    {
         "hrsh7th/nvim-cmp",
@@ -132,8 +138,23 @@ local plugins = {
        lazy = false,
    },
    {
-       "HiPhish/rainbow-delimiters.nvim",
+       "kdheepak/lazygit.nvim",
+       event = "VeryLazy",
+       dependencies =  {
+           "nvim-telescope/telescope.nvim",
+           "nvim-lua/plenary.nvim"
+       },
+       config = function()
+           require("telescope").load_extension("lazygit")
+       end,
+   },
+   {
+       "echasnovski/mini.animate",
+       version = '*',
        lazy = false,
+       config = function ()
+            require("mini.animate").setup()
+       end,
    },
 }
 return plugins
