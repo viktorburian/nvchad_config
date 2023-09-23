@@ -49,4 +49,13 @@ M.git = {
     }
 }
 
+M.lsp = {
+    n = {
+        ["<leader>ls"] = {
+            "<cmd> SymbolsOutline <CR>",
+            "Toggle symbols outline"
+        }
+    }
+}
+
 return M
