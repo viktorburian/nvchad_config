@@ -7,6 +7,7 @@ local plugins = {
         "lua",
         "c",
         "cpp",
+        "cmake",
         "python",
         "rust",
         "yaml"
