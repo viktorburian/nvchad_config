@@ -8,6 +8,8 @@ local plugins = {
         "c",
         "cpp",
         "cmake",
+        "markdown",
+        "markdown_inline",
         "python",
         "rust",
         "yaml"
